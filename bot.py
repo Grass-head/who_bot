@@ -121,7 +121,7 @@ def main():
   dp = mybot.dispatcher
   #добавляем хендлеры для обработки событий
   dp.add_handler(CommandHandler('start', greet_user, pass_user_data=True))
-  dp.add_handler(CallbackQueryHandler(send_card, pass_user_data=True)))
+  dp.add_handler(CallbackQueryHandler(send_card, pass_user_data=True))
   dp.add_handler(MessageHandler(Filters.regex('^(СТОП-ИГРА)$'), stop_game, pass_user_data=True))
   dp.add_handler(MessageHandler(Filters.regex('^(КАТЕГОРИИ)$'), categories, pass_user_data=True))
   #командуем боту начать ходить в Telegram за сообщениями
